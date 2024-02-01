@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'src/screens/post_details/post_details.dart';
 import 'src/screens/post_listing/post_listing.dart';
+import 'src/screens/web_view/web_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,6 +30,10 @@ class _MyAppState extends State<MyApp> {
         PostDetailsScreen.path: (context) => PostDetailsScreen(
               payload: ModalRoute.of(context)!.settings.arguments
                   as PostDetailsScreenPayload,
+            ),
+        WebViewScreen.path: (context) => WebViewScreen(
+              payload: ModalRoute.of(context)!.settings.arguments
+                  as WebViewScreenPayload,
             ),
       },
     );
